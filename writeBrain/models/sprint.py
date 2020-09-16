@@ -6,7 +6,7 @@ from .story import Story
 class Sprint(models.Model):
 
     body = models.CharField(max_length=500000)
-    started_at = models.DateTimeField(auto_now=True)
+    started_at = models.DateTimeField(auto_now=False)
     ended_at = models.DateTimeField(auto_now=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     story = models.OneToOneField(Story, on_delete=models.CASCADE)
