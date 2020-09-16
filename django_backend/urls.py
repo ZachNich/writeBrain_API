@@ -22,7 +22,6 @@ from writeBrain.models import *
 router = routers.DefaultRouter(trailing_slash=False)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-token-auth/', obtain_auth_token),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
