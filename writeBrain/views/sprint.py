@@ -40,7 +40,7 @@ class Sprints(ViewSet):
         )
 
         serializer = SprintSerializer(sprint, context={'request': request})
-
+        print('postresponse:', Response(serializer.data, content_type='application/json'))
         return Response(serializer.data, content_type='application/json')
 
     def retrieve(self, request, pk=None):

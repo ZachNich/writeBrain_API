@@ -1,0 +1,54 @@
+[
+    {
+        "model": "writeBrain.sprint",
+        "pk": 1,
+        "fields": {
+            "body": "A long flight of weathered steps led to a hollow wooden door with rusty numbers beckoning us into room 1108. Inside, we barely noticed the lumpy bed, faded wood paneling, and thin, tacky carpet. \n\n We could see the seashore from our perch and easily wander down to feel the sand between our toes. We returned again and again until the burgeoning resort tore down our orange-shingled eyesore. Forty years later, my husband periodically sends me short e-mails that declare the time: 11:08. “I love you, too,” I write back.",
+            "started_at": "2020-01-05 09:30:00",
+            "ended_at": "2020-01-05 10:35:00",
+            "mood_before_id": 1,
+            "mood_after_id": 2,
+            "story_id": 1,
+            "user_id": 1
+        }
+    },
+    {
+        "model": "writeBrain.sprint",
+        "pk": 2,
+        "fields": {
+            "body": "you fit into me \n like a hook into an eye \n\n a fish hook \n an open eye",
+            "started_at": "2020-01-07 09:55:00",
+            "ended_at": "2020-01-08 10:13:00",
+            "mood_before_id": 3,
+            "mood_after_id": 4,
+            "story_id": 2,
+            "user_id": 1
+        }
+    },
+    {
+        "model": "writeBrain.sprint",
+        "pk": 3,
+        "fields": {
+            "body": "1. Bakery and Bread\n2. Meat and Seafood\n3. Pasta and Rice\n4. Oils, Sauces, Salad Dressings, and Condiments\n5. Cereals and Breakfast Foods\n6. Soups and Canned Goods\n7. Frozen Foods\n8. Dairy, Cheese, and Eggs\n9. Snacks and Crackers\n10. Produce\n11. Drinks",
+            "started_at": "2020-09-14 18:30:00",
+            "ended_at": "2020-09-14 18:41:00",
+            "mood_before_id": 5,
+            "mood_after_id": 5,
+            "story_id": 3,
+            "user_id": 2
+        }
+    },
+    {
+        "model": "writeBrain.sprint",
+        "pk": 1,
+        "fields": {
+            "body": "My life has been the poem I would have writ\nBut I could not both live and utter it.",
+            "started_at": "2019-11-11 19:01:00",
+            "ended_at": "2020-11-11 19:14:00",
+            "mood_before_id": 3,
+            "mood_after_id": 2,
+            "story_id": 2,
+            "user_id": 1
+        }
+    }
+]

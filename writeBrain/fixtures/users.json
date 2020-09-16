@@ -1,0 +1,26 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "writer_91",
+            "password": "password",
+            "email": "writer_91@writer_91.com",
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "grocery_guy_91",
+            "password": "password",
+            "email": "grocery_guy_91@grocery_guy_91.com",
+            "is_superuser": false,
+            "is_staff": false,
+            "is_active": true
+        }
+    }
+]
