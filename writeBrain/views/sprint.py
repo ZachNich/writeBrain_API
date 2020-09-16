@@ -75,6 +75,6 @@ class Sprints(ViewSet):
 
         sprints = Sprint.objects.all()
 
-        serializer = SprintSerializer(products, many=True, context={'request': request})
+        serializer = SprintSerializer(sprints, many=True, context={'request': request})
 
         return Response(serializer.data)

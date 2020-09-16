@@ -18,8 +18,10 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 from writeBrain.models import *
+from writeBrain.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'sprints', Sprints, 'sprints')
 
 urlpatterns = [
     path('', include(router.urls)),
