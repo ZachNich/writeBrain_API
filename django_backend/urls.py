@@ -18,13 +18,16 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 from writeBrain.models import *
-from writeBrain.views import *
+from writeBrain.views import login_user, register_user, Sprints
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'sprints', Sprints, 'sprints')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('admin/', admin.site.urls),
     path('api-token-auth/', obtain_auth_token),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('login', login_user),
+    path('register', register_user)
 ]
