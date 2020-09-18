@@ -73,6 +73,7 @@ class Sprints(ViewSet):
     def list(self, request):
 
         sprints = Sprint.objects.all()
+        sprints = sprints.filter(user__id=request.user.id)
 
         serializer = SprintSerializer(sprints, many=True, context={'request': request})
 
