@@ -73,9 +73,13 @@ class Sprints(ViewSet):
     def list(self, request):
 
         sprints = Sprint.objects.all()
+        story = self.request.query_params.get('story', None)
+
         if request.user.id:
             sprints = sprints.filter(user__id=request.user.id)
-
+        if story is not None:
+            sprints = sprints.filter(story__id=story)
+            
         serializer = SprintSerializer(sprints, many=True, context={'request': request})
 
         return Response(serializer.data)
