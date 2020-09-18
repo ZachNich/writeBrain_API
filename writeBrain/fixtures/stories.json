@@ -1,0 +1,29 @@
+[
+    {
+        "model": "writeBrain.story",
+        "pk": 1,
+        "fields": {
+            "title": "Nanowrimo 2020",
+            "description": "Sprints for Nanowrimo 2020",
+            "user_id": 2
+        }
+    },
+    {
+        "model": "writeBrain.story",
+        "pk": 2,
+        "fields": {
+            "title": "Poems",
+            "description": "Quick poems I wrote",
+            "user_id": 2
+        }
+    },
+    {
+        "model": "writeBrain.story",
+        "pk": 3,
+        "fields": {
+            "title": "Grocery lists",
+            "description": "All grocery lists for the year 2020",
+            "user_id": 3
+        }
+    }
+]
