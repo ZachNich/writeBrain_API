@@ -66,7 +66,8 @@ class Stories(ViewSet):
     def list(self, request):
 
         stories = Story.objects.all()
-        stories = stories.filter(user__id=request.user.id)
+        if request.user.id:
+            stories = stories.filter(user__id=request.user.id)
         serializer = StorySerializer(stories, many=True, context={'request': request})
 
         return Response(serializer.data)
