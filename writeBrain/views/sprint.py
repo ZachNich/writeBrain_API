@@ -40,7 +40,6 @@ class Sprints(ViewSet):
         )
 
         serializer = SprintSerializer(sprint, context={'request': request})
-        print('postresponse:', Response(serializer.data, content_type='application/json'))
         return Response(serializer.data, content_type='application/json')
 
     def retrieve(self, request, pk=None):
@@ -68,7 +67,7 @@ class Sprints(ViewSet):
             sprint.delete()
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-        except Product.DoesNotExist as ex:
+        except Sprint.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def list(self, request):
