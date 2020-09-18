@@ -9,7 +9,7 @@
             "mood_before_id": 1,
             "mood_after_id": 2,
             "story_id": 1,
-            "user_id": 1
+            "user_id": 2
         }
     },
     {
@@ -22,7 +22,7 @@
             "mood_before_id": 3,
             "mood_after_id": 4,
             "story_id": 2,
-            "user_id": 1
+            "user_id": 2
         }
     },
     {
@@ -35,7 +35,7 @@
             "mood_before_id": 5,
             "mood_after_id": 5,
             "story_id": 3,
-            "user_id": 2
+            "user_id": 3
         }
     },
     {
@@ -48,7 +48,7 @@
             "mood_before_id": 3,
             "mood_after_id": 2,
             "story_id": 2,
-            "user_id": 1
+            "user_id": 2
         }
     }
 ]
