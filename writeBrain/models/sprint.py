@@ -10,9 +10,9 @@ class Sprint(models.Model):
     ended_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     story = models.ForeignKey(Story, on_delete=models.CASCADE)
-    mood_before = models.ForeignKey(Mood, related_name="mood_before", on_delete=models.DO_NOTHING)
-    mood_after = models.ForeignKey(Mood, related_name="mood_after", on_delete=models.DO_NOTHING)
+    mood_before = models.ForeignKey(Mood, related_name="sprint_before", on_delete=models.DO_NOTHING)
+    mood_after = models.ForeignKey(Mood, related_name="sprint_after", on_delete=models.DO_NOTHING)
 
     class Meta:
-        verbose_name = ("Sprint")
-        verbose_name_plural = ("Sprints")
+        verbose_name = ("sprint")
+        verbose_name_plural = ("sprints")
