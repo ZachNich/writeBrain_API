@@ -55,7 +55,7 @@ class Sprints(ViewSet):
     def update(self, request, pk=None):
 
         sprint = Sprint.objects.get(pk=pk)
-        sprint.story = request.data["story"]
+        sprint.story = Story.objects.get(pk=request.data["story_id"])
         sprint.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
