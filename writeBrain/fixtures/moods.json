@@ -3,35 +3,56 @@
         "model": "writeBrain.mood",
         "pk": 1,
         "fields": {
-            "name": "motivated"
+            "name": "happy"
         }
     },
     {
         "model": "writeBrain.mood",
         "pk": 2,
         "fields": {
-            "name": "lazy"
+            "name": "sad"
         }
     },
     {
         "model": "writeBrain.mood",
         "pk": 3,
         "fields": {
-            "name": "stressed"
+            "name": "lazy"
         }
     },
     {
         "model": "writeBrain.mood",
         "pk": 4,
         "fields": {
-            "name": "happy"
+            "name": "motivated"
         }
     },
     {
         "model": "writeBrain.mood",
         "pk": 5,
         "fields": {
-            "name": "sad"
+            "name": "bored"
+        }
+    },
+    {
+        "model": "writeBrain.mood",
+        "pk": 6,
+        "fields": {
+            "name": "excited"
+        }
+    },
+    {
+        "model": "writeBrain.mood",
+        "pk": 7,
+        "fields": {
+            "name": "angry"
+        }
+    },
+    {
+        "model": "writeBrain.mood",
+        "pk": 8,
+        "fields": {
+            "name": "anxious"
         }
     }
 ]
