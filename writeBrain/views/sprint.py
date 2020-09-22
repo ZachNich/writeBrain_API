@@ -67,7 +67,7 @@ class Sprints(ViewSet):
             sprint.delete()
             return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-        except Sprint.DoesNotExist as ex:
+        except sprint.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def list(self, request):
