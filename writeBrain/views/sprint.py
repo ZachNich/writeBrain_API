@@ -13,10 +13,6 @@ class SprintSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sprint
-        # url = serializers.HyperlinkedIdentityField(
-        #     view_name='sprint',
-        #     lookup_field='id'
-        # )
         fields = ("id", "body", "started_at", "ended_at", "mood_before", "mood_after", "story", "user")
         depth = 1
 
@@ -33,6 +29,7 @@ class Sprints(ViewSet):
         sprint = Sprint.objects.create(
             body=request.data["body"],
             started_at=request.data["started_at"],
+            ended_at=request.data["ended_at"],
             mood_before=mood_before,
             mood_after=mood_after,
             story=story,
