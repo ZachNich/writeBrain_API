@@ -29,6 +29,7 @@ class Sprints(ViewSet):
         sprint = Sprint.objects.create(
             body=request.data["body"],
             started_at=request.data["started_at"],
+            ended_at=request.data["ended_at"],
             mood_before=mood_before,
             mood_after=mood_after,
             story=story,
