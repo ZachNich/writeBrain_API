@@ -1,5 +1,6 @@
 from django.http import HttpResponseServerError
 from django.http import HttpResponse
+from django.http import JsonResponse
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
@@ -36,7 +37,6 @@ class Sprints(ViewSet):
             story=story,
             user=user
         )
-
         serializer = SprintSerializer(sprint, context={'request': request})
         return Response(serializer.data, content_type='application/json')
 
@@ -44,9 +44,9 @@ class Sprints(ViewSet):
 
         try:
             sprint = Sprint.objects.get(pk=pk)
-            sprint["analysis"] = sprint.analyze()
+            analysis = analyze(sprint.body)
             serializer = SprintSerializer(sprint, many=False, context={'request': request})
-            return Response(serializer.data)
+            return JsonResponse([analysis, serializer.data], safe=False)
 
         except Exception as ex:
             return HttpResponseServerError(ex)

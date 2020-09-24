@@ -2,7 +2,7 @@ from textblob import TextBlob
 
 def analyze(text):
     blob = TextBlob(text)
-    word_frequency = {}
+    word_frequency = set()
     for word in blob.words:
         word_frequency.add({
             "word": word,
