@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from writeBrain.models import Sprint
 from writeBrain.models import Story
 from writeBrain.models import Mood
+from writeBrain.helpers import analyze
 
 class SprintSerializer(serializers.ModelSerializer):
 
@@ -43,6 +44,7 @@ class Sprints(ViewSet):
 
         try:
             sprint = Sprint.objects.get(pk=pk)
+            sprint["analysis"] = sprint.analyze()
             serializer = SprintSerializer(sprint, many=False, context={'request': request})
             return Response(serializer.data)
 
