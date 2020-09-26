@@ -18,7 +18,7 @@
         "fields": {
             "body": "you fit into me \n like a hook into an eye \n\n a fish hook \n an open eye",
             "started_at": "2020-01-07 09:55:00",
-            "ended_at": "2020-01-08 10:13:00",
+            "ended_at": "2020-01-07 10:13:00",
             "mood_before_id": 3,
             "mood_after_id": 4,
             "story_id": 2,
@@ -35,7 +35,7 @@
             "mood_before_id": 5,
             "mood_after_id": 5,
             "story_id": 3,
-            "user_id": 3
+            "user_id": 2
         }
     },
     {
