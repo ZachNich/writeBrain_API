@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from django.contrib.auth.models import User
+from django.forms.models import model_to_dict
 from writeBrain.models import Sprint
 from writeBrain.models import Story
 from writeBrain.models import Mood
@@ -44,7 +45,8 @@ class Sprints(ViewSet):
 
         try:
             sprint = Sprint.objects.get(pk=pk)
-            print(sprint.body)
+            analysis = analyze(sprint.body)
+            print("ANAL", analysis)
             serializer = SprintSerializer(sprint, many=False, context={'request': request})
             return Response(serializer.data)
 
