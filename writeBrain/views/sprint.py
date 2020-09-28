@@ -46,9 +46,8 @@ class Sprints(ViewSet):
         try:
             sprint = Sprint.objects.get(pk=pk)
             analysis = analyze(sprint.body)
-            print("ANAL", analysis)
             serializer = SprintSerializer(sprint, many=False, context={'request': request})
-            return Response(serializer.data)
+            return JsonResponse({"data": serializer.data, "analysis": analysis})
 
         except Exception as ex:
             return HttpResponseServerError(ex)
