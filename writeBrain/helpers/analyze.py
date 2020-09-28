@@ -3,17 +3,17 @@ from textblob import TextBlob
 def analyze(text):
     blob = TextBlob(text)
     word_frequency = list()
+    dupe_check = list()
     for word in list(blob.words):
-        word_frequency.append({
-            "word": word,
-            "frequency": blob.word_counts[word]
-        })
+        if word not in dupe_check:
+            word_frequency.append([word, blob.word_counts[word]])
+        dupe_check.append(word)
     analysis = {
         "tags": blob.tags,
         "sentiment": blob.sentiment,
         "words": blob.words,
         "sentences": blob.sentences,
-        "word_frequency": word_frequency
+        "word_frequency": sorted(word_frequency, key = lambda x: x[1], reverse=True)
     }
     print(analysis)
     return analysis
